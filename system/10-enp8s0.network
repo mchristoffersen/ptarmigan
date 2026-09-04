@@ -1,0 +1,5 @@
+[Match]
+Name=enp8s0
+
+[Network]
+Address=192.168.1.35/24

@@ -1,0 +1,10 @@
+[Match]
+Name=enp6s0f1
+
+[Link]
+Duplex=full
+MTUBytes=9000
+
+[Network]
+Address=192.168.40.1/24
+
