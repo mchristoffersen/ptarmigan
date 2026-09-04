@@ -1,0 +1,6 @@
+data/
+
+ctrl/radar
+ctrl/query_gps
+ctrl/query_radio
+ctrl/record_noise
