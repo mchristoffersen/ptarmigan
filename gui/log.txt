@@ -1,0 +1,133 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 999-628-333
+127.0.0.1 - - [02/Sep/2026 11:22:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:49] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [02/Sep/2026 11:22:49] "GET /static/controls.js HTTP/1.1" 304 -
+127.0.0.1 - - [02/Sep/2026 11:22:49] "GET /static/plotly-4.0.0.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [02/Sep/2026 11:22:49] "GET /static/ptarmigan_fws.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [02/Sep/2026 11:22:50] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:51] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:51] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:52] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:52] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:53] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:53] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:54] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:54] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:55] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:55] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:56] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:56] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:57] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:57] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:58] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:58] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:59] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:22:59] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:00] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:00] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:01] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:01] "GET /state HTTP/1.1" 200 -
+10.0/10.0/5.0
+Starting acquisition with waveform 10.0/10.0/5.0
+127.0.0.1 - - [02/Sep/2026 11:23:02] "POST /start HTTP/1.1" 200 -
+
+Creating the usrp device with: type=x300,addr=192.168.10.2...
+[INFO] [UHD] linux; GNU C++ version 13.2.0; Boost_108300; UHD_4.6.0.0+ds1-5.1ubuntu0.24.04.1
+[INFO] [X300] X300 initialization sequence...
+127.0.0.1 - - [02/Sep/2026 11:23:02] "GET /state HTTP/1.1" 200 -
+[INFO] [X300] Maximum frame size: 1472 bytes.
+127.0.0.1 - - [02/Sep/2026 11:23:02] "GET /state HTTP/1.1" 200 -
+[INFO] [GPS] Found an internal GPSDO: LC_XO, Firmware Rev 0.929a
+127.0.0.1 - - [02/Sep/2026 11:23:03] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:03] "GET /state HTTP/1.1" 200 -
+Querying radio
+127.0.0.1 - - [02/Sep/2026 11:23:03] "POST /queryRadio HTTP/1.1" 200 -
+[INFO] [UHD] linux; GNU C++ version 13.2.0; Boost_108300; UHD_4.6.0.0+ds1-5.1ubuntu0.24.04.1
+127.0.0.1 - - [02/Sep/2026 11:23:04] "GET /state HTTP/1.1" 200 -
+No USRP devices found
+[INFO] [X300] Radio 1x clock: 200 MHz
+[WARNING] [UDP] The send buffer could not be resized sufficiently.
+Target sock buff size: 2453333 bytes.
+Actual sock buff size: 1048576 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.wmem_max=2453333
+127.0.0.1 - - [02/Sep/2026 11:23:04] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:05] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:06] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:06] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:07] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:07] "GET /state HTTP/1.1" 200 -
+Setting TX Rate: 50.000000 Msps...
+Actual TX Rate: 50.000000 Msps...
+
+Setting RX Rate: 100.000000 Msps...
+Actual RX Rate: 100.000000 Msps...
+
+Setting TX Freq: 2.500000 MHz...
+127.0.0.1 - - [02/Sep/2026 11:23:08] "GET /state HTTP/1.1" 200 -
+Actual TX Freq: 2.499998 MHz...
+
+Setting RX Freq: 0.000000 MHz...
+Actual RX Freq: 0.000000 MHz...
+
+[WARNING] [UDP] The send buffer could not be resized sufficiently.
+Target sock buff size: 2453333 bytes.
+Actual sock buff size: 1048576 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.wmem_max=2453333
+[WARNING] [0/Radio#0] Attempting to set tick rate to 0. Skipping.
+[WARNING] [UDP] The send buffer could not be resized sufficiently.
+Target sock buff size: 2453333 bytes.
+Actual sock buff size: 1048576 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.wmem_max=2453333
+[WARNING] [0/Radio#1] Attempting to set tick rate to 0. Skipping.
+Setting device time to GPS time...
+127.0.0.1 - - [02/Sep/2026 11:23:08] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:09] "GET /state HTTP/1.1" 200 -
+Output file: /home/mchristo/proj/snow4flow/ptarmigan/data/2006-01-01_00-04-21.dat
+127.0.0.1 - - [02/Sep/2026 11:23:09] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:10] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:10] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:11] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:11] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:12] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:12] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:13] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:13] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:14] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:14] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:15] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:15] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:16] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:16] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:17] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:17] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:18] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:18] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:19] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:19] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:20] "GET /state HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 11:23:21] "GET /state HTTP/1.1" 200 -
+ * Detected change in '/home/mchristo/proj/snow4flow/ptarmigan/gui/app.py', reloading
+ * Restarting with stat
+ * Serving Flask app 'app'
+ * Debug mode: on
+Querying radio
+[INFO] [UHD] linux; GNU C++ version 13.2.0; Boost_108300; UHD_4.6.0.0+ds1-5.1ubuntu0.24.04.1
+[INFO] [X300] X300 initialization sequence...
+[INFO] [X300] Maximum frame size: 1472 bytes.
+[INFO] [GPS] Found an internal GPSDO: LC_XO, Firmware Rev 0.929a
+[INFO] [X300] Radio 1x clock: 200 MHz
+[WARNING] [UDP] The send buffer could not be resized sufficiently.
+Target sock buff size: 2453333 bytes.
+Actual sock buff size: 1048576 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.wmem_max=2453333

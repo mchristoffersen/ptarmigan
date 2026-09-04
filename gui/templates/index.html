@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/plotly-4.0.0.min.js" charset="utf-8"></script>
+    <script>
+      window.chirpConfigs = {{ configs | tojson }};
+    </script>
+    <script src="/static/controls.js" charset="utf-8"></script>
+    <meta charset="UTF-8" />
+    <title>Ptarmigan</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="/static/ptarmigan_fws.jpg" alt="Ptarmigan" />
+      </div>
+      <div class="title">
+        <h1 style="margin: 0">Arizona Radio Echo Sounder</h1>
+      </div>
+      <div class="controls">
+        <h2 style="margin: 0 0 10px 0">Chirp Select</h2>
+        <select class="xmit" id="xmitSelect">
+          {% for key, config in configs.items() %}
+          <option value="{{ key }}">{{ key }}</option>
+          {% endfor %}
+        </select>
+
+        <table class="infoTable">
+          <tr>
+            <td style="text-align: left;">CF / BW / Len</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><label for="centerFrequency">Center Freq. (MHz):</label></td>
+            <td>
+              <div class="chirp-values">
+                <input type="text" class="centerFrequency" readonly />
+                <input type="text" class="centerFrequency" readonly />
+                <input type="text" class="centerFrequency" readonly />
+                <input type="text" class="centerFrequency" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Bandwidth">Bandwidth (%):</label></td>
+            <td>
+              <div class="chirp-values">
+                <input type="text" class="Bandwidth" readonly />
+                <input type="text" class="Bandwidth" readonly />
+                <input type="text" class="Bandwidth" readonly />
+                <input type="text" class="Bandwidth" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="chirpLength">Chirp Length (&mu;s):</label></td>
+            <td>
+              <div class="chirp-values">
+                <input type="text" class="chirpLength" readonly />
+                <input type="text" class="chirpLength" readonly />
+                <input type="text" class="chirpLength" readonly />
+                <input type="text" class="chirpLength" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="traceLength">Trace Length (&mu;s):</label></td>
+            <td>
+              <div class="chirp-values">
+                <input type="text" class="traceLength" readonly />
+                <input type="text" class="traceLength" readonly />
+                <input type="text" class="traceLength" readonly />
+                <input type="text" class="traceLength" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="power">Power (dBm):</label></td>
+            <td>
+              <div class="chirp-values">
+                <input type="text" class="power" readonly />
+                <input type="text" class="power" readonly />
+                <input type="text" class="power" readonly />
+                <input type="text" class="power" readonly />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="prf">PRF (Hz):</label></td>
+            <td><input type="text" id="prf" readonly /></td>
+          </tr>
+          <tr>
+            <td><label for="stacking">Stacking:</label></td>
+            <td><input type="text" id="stacking" readonly /></td>
+          </tr>
+          <tr>
+            <td><label for="sampling">Samp. Freq. (MHz):</label></td>
+            <td><input type="text" id="sampling" readonly /></td>
+          </tr>
+        </table>
+        <div class="buttons">
+          <button class="queryRadio">Query Radio</button>
+          <button class="queryGPS">Query GPS</button>
+          <div class="startstop">
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+          </div>
+        </div>
+      </div>
+      <div class="data">
+        <div class="tracePlot" id="tracePlot"></div>
+        <div class="dataStream">
+          <div class="console"><textarea id="console" readonly></textarea></div>
+          <div class="status">
+            <div class="statusCol">
+              <h3 class="statusHeader" id="gpsHeader">GPS</h3>
+              <table class="infoTable">
+                <tr>
+                  <td><label for="gpsStatus">Status:</label></td>
+                  <td><input type="text" id="gpsStatus" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="time">Time:</label></td>
+                  <td><input type="text" id="time" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="latitude">Latitude:</label></td>
+                  <td><input type="text" id="latitude" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="longitude">Longitude:</label></td>
+                  <td><input type="text" id="longitude" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="height">Height:</label></td>
+                  <td><input type="text" id="height" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="satellites">Satellites:</label></td>
+                  <td><input type="text" id="satellites" readonly /></td>
+                </tr>
+              </table>
+            </div>
+            <div class="statusCol">
+              <h3 class="statusHeader" id="radioHeader">Radio</h3>
+              <table class="infoTable">
+                <tr>
+                  <td><label for="radioStatus">Status:</label></td>
+                  <td><input type="text" id="radioStatus" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="fileName">File Name:</label></td>
+                  <td><input type="text" id="fileName" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="rxTraces">RX Traces:</label></td>
+                  <td><input type="text" id="rxTraces" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="refClk">Ref. Clock:</label></td>
+                  <td><input type="text" id="refClk" readonly /></td>
+                </tr>
+                <tr>
+                  <td><label for="timeSrc">Time Src.:</label></td>
+                  <td><input type="text" id="timeSrc" readonly /></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footerColumns">
+          <div class="footerColumn"></div>
+          <div class="footerColumn text-center">
+            <h4 class="footerText">Ptarmigan</h4>
+          </div>
+          <div class="footerColumn text-right">
+            <h4 class="footerText">v0.0.1</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

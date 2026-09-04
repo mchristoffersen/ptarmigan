@@ -1,0 +1,268 @@
+:root {
+  --medium-jungle: #00a352ff;
+  --medium-jungle-tr: #00a352aa;
+  --golden-pollen: #ffc857ff;
+  --golden-pollen-tr: #ffc857aa;
+  --electric-red: #ff2a1fff;
+  --electric-red-tr: #ff2a1faa;
+  --lilac-ash: #ada8b6ff;
+  --lilac-ash-dark: #7c748bff;
+  --lilac-ash-light: #dad8dfff;
+  --rich-mahogany: #2f0601ff;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+div.container {
+  display: grid;
+  grid-template-areas:
+    "image    title"
+    "image    data"
+    "controls data"
+    "footer   footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+  gap: 5px;
+  background-color: var(--rich-mahogany);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div.container > div {
+  background-color: var(--lilac-ash);
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+}
+
+div.image {
+  grid-area: image;
+}
+
+div.title {
+  grid-area: title;
+  text-align: center;
+}
+
+div.controls {
+  grid-area: controls;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+div.data {
+  grid-area: data;
+  display: flex;
+  flex-direction: column;
+}
+
+div.footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+div.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+div.startstop {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+div.tracePlot {
+  flex: 2;
+  margin: 15px;
+}
+
+div.dataStream {
+  flex: 1;
+  margin: 15px;
+  gap: 10px;
+  display: flex;
+}
+
+div.console {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+div.status {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  min-width: 0;
+}
+
+div.statusCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+div.statusCol table.infoTable {
+  flex: 1;
+}
+
+h3.statusHeader {
+  margin: 0 0 10px 0;
+  text-align: center;
+  background-color: var(--lilac-ash-light);
+  border-color: var(--lilac-ash-dark);
+  border-width: 5px;
+  border-style: outset;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+button.start {
+  flex: 1;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--medium-jungle-tr);
+}
+
+button.stop {
+  flex: 1;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--electric-red-tr);
+}
+
+button.queryGPS,
+button.queryRadio {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--golden-pollen-tr);
+}
+
+select.xmit {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+select.chirp {
+  width: 100%;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+table.infoTable {
+  border-collapse: collapse;
+}
+
+table.infoTable td {
+  padding: 4px 8px;
+  min-width: 0;
+}
+
+table.infoTable td:first-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+table.infoTable input {
+  font-size: 18px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border-style: inset;
+  background-color: var(--lilac-ash-light);
+  border-color: var(--lilac-ash-dark);
+}
+
+table.infoTable label {
+  font-size: 18px;
+}
+
+div.console textarea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--lilac-ash-light);
+  font-size: 16px;
+  font-family: monospace;
+  border: 5px solid var(--lilac-ash-dark);
+  border-style: inset;
+  resize: none;
+  white-space: pre-wrap;
+}
+
+div.footerColumns {
+  display: flex;
+  width: 100%;
+}
+
+div.footerColumn {
+  flex: 1;
+  margin: 0;
+}
+
+div.footerColumn {
+  flex: 1;
+  margin: 0;
+}
+
+div.text-center {
+  text-align: center;
+}
+
+div.text-right {
+  text-align: right;
+}
+
+h4.footerText {
+  margin: 5px;
+}
+
+div.chirp-values {
+  display: flex;
+  gap: 4px;
+}
+
+div.chirp-values input {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#tracePlot .modebar-btn {
+  font-size: 28px;
+  height: 40px;
+  padding: 4px 8px;
+}
+
+#tracePlot .modebar-group {
+  padding-left: 12px;
+  border-radius: 4px;
+}
