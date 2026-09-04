@@ -1,0 +1,10 @@
+prf = 2000            # Hz
+stacking = 100
+sampling_freq = 100.0    # MHz
+
+[[chirp]]
+center_frequency = 10.0  # MHz
+bandwidth = 100.0  # Percent
+chirp_length = 1.0  # us
+trace_length = 50.0  # us
+power = 0.0  # dBFS
